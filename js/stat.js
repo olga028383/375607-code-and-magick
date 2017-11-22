@@ -1,7 +1,7 @@
 'use strict';
 
 var maxValueArray = function (arr) {
-  var max = -1; //почему здесь значение именно -1, а ноль нельзя, в чем разница?
+  var max = -1; // почему здесь значение именно -1, а ноль нельзя, в чем разница?
   var maxIndent = -1;
   for (var i = 0; i < arr.length; i++) {
     var time = arr[i];
