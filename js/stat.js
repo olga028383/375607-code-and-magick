@@ -16,7 +16,7 @@ var drawRectangle = function (context, color, points) {
   context.fillStyle = color;
   context.fillRect(points[0], points[1], points[2], points[3]);
 };
-var writeText = function(context, color, font, points) {
+var writeText = function (context, color, font, points) {
   var arrayLength;
   var i;
   context.fillStyle = color;
