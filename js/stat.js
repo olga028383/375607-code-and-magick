@@ -1,5 +1,4 @@
 'use strict';
-
 var getMaxValueArray = function (array) {
   var max = -1;
   var time;
@@ -13,11 +12,11 @@ var getMaxValueArray = function (array) {
   }
   return max;
 };
-var drawRectangle = function (context, color, points){
+var drawRectangle = function (context, color, points) {
   context.fillStyle = color;
   context.fillRect(points[0], points[1], points[2], points[3]);
 };
-var writeText = function(context, color, font, points){
+var writeText = function(context, color, font, points) {
   var arrayLength;
   var i;
   context.fillStyle = color;
@@ -27,9 +26,10 @@ var writeText = function(context, color, font, points){
   }
 };
 var getColor = function (name, context) {
-  var color = (name === 'Вы') ? context.strokeStyle = 'rgba(255, 0, 0, 1)' : context.strokeStyle = 'rgba(52, 26, 145 , ' + (Math.random() + 0.2) + ')';
-  return color;
-}
+  return (name === 'Вы') ?
+    (context.strokeStyle = 'rgba(255, 0, 0, 1)') :
+    (context.strokeStyle = 'rgba(52, 26, 145 , ' + (Math.random() + 0.2) + ')');
+};
 window.renderStatistics = function (ctx, names, times) {
   var texts = [
     {'text': 'Ура вы победили!', 'coordX': 120, 'coordY': 45},
