@@ -7,7 +7,7 @@ var characters;
 var fragment;
 var charactersLength;
 var i;
-var startingPointWizardCycleFormation = 0;
+var startingPointWizardCycleFormation;
 var allWizard = {
   names: ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'],
   surnames: ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'],
@@ -26,12 +26,16 @@ var getRandomArrayIndex = function (array) {
 
 var generateArrayCharacters = function (objWizard, quantity, startQuantity) {
   var arrayCharacters = [];
-  var name = objWizard.names[getRandomArrayIndex(objWizard.names)];
-  var surname = objWizard.surnames[getRandomArrayIndex(objWizard.surnames)];
-  var coatColor = objWizard.coatColors[getRandomArrayIndex(objWizard.coatColors)];
-  var eyesColor = objWizard.eyesColors[getRandomArrayIndex(objWizard.eyesColors)];
-  for (startQuantity = 0; startQuantity < quantity; i++) {
-    characters[i] = {
+  var name;
+  var surname;
+  var coatColor;
+  var eyesColor;
+  for (startQuantity = 0; startQuantity < quantity; startQuantity++) {
+    name = objWizard.names[getRandomArrayIndex(objWizard.names)];
+    surname = objWizard.surnames[getRandomArrayIndex(objWizard.surnames)];
+    coatColor = objWizard.coatColors[getRandomArrayIndex(objWizard.coatColors)];
+    eyesColor = objWizard.eyesColors[getRandomArrayIndex(objWizard.eyesColors)];
+    arrayCharacters[startQuantity] = {
       name: name + ' ' + surname,
       coatColor: coatColor,
       eyesColor: eyesColor
