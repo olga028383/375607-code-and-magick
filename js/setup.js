@@ -22,16 +22,18 @@
     event.target.appendChild(draggedItem.cloneNode(true));
     event.preventDefault();
   });
-
-
   artifactsElement.addEventListener('dragenter', function (event) {
     event.target.style.backgroundColor = 'yellow';
-    artifactsElement.style.outline = '';
     event.preventDefault();
   });
 
   artifactsElement.addEventListener('dragleave', function (event) {
     event.target.style.backgroundColor = '';
+    event.preventDefault();
+  });
+
+  shopElement.addEventListener('dragend', function (event) {
+    artifactsElement.style.outline = '';
     event.preventDefault();
   });
 })();
