@@ -27,17 +27,12 @@
 
   var onPopupMousedown = function (event) {
     event.preventDefault();
-    var coords = window.data.setupDialog.getBoundingClientRect();
-    var shift = {
-      x: event.clientX - coords.left,
-      y: event.clientY - coords.top
-    };
 
     var onPopupMousemove = function (eventMove) {
       eventMove.preventDefault();
 
-      window.data.setupDialog.style.top = eventMove.clientY - shift.y + 'px';
-      window.data.setupDialog.style.left = eventMove.clientX - shift.x + 'px';
+      window.data.setupDialog.style.top = eventMove.clientY + 'px';
+      window.data.setupDialog.style.left = eventMove.clientX + 'px';
       window.data.setupDialog.style.transform = 'none';
     };
 
