@@ -15,7 +15,6 @@
 
   artifactsElement.addEventListener('dragover', function (event) {
     event.preventDefault();
-    return false;
   });
 
   artifactsElement.addEventListener('drop', function (event) {
