@@ -51,7 +51,7 @@
 
   similarListElement.appendChild(fragment);
 
-  window.util.showElement(window.data.setupDialog.querySelector('.setup-similar'), 'hidden');
+  window.util.toggleElement(window.data.setupDialog.querySelector('.setup-similar'), 'hidden');
 
 })();
 
