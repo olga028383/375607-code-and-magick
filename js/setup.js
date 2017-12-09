@@ -22,6 +22,7 @@
     event.target.appendChild(draggedItem.cloneNode(true));
     event.preventDefault();
   });
+
   artifactsElement.addEventListener('dragenter', function (event) {
     event.target.style.backgroundColor = 'yellow';
     event.preventDefault();

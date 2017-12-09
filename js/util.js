@@ -20,6 +20,9 @@
     },
     getRandomArrayIndex: function (array) {
       return Math.floor(Math.random() * array.length);
+    },
+    colorizeElement: function (element, array, callback) {
+      callback(element, array[window.util.getRandomArrayIndex(array)]);
     }
   };
 })();
